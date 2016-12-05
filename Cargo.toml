@@ -4,3 +4,10 @@ version = "0.1.0"
 authors = ["Stefan Müller <s.mueller@it.kls-glt.de>"]
 
 [dependencies]
+gtk = "^0"
+
+[features]
+default = ["gtk_3_18"]
+gtk_3_10 = ["gtk/v3_10"]
+gtk_3_16 = ["gtk_3_10", "gtk/v3_16"]
+gtk_3_18 = ["gtk_3_16"] #for CI tools
