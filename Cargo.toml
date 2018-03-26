@@ -3,6 +3,10 @@ name = "hello-world"
 version = "0.1.0"
 authors = ["Stefan Müller <s.mueller@it.kls-glt.de>"]
 
+[[bin]]
+name = "hello-rocket"
+path = "src/main.rs"
+
 [dependencies]
 rocket = "0.3.6"
 rocket_codegen = "0.3.6"
