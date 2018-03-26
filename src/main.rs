@@ -1,3 +1,13 @@
+#![feature(plugin)]
+#![plugin(rocket_codegen)]
+
+extern crate rocket;
+
+#[get("/")]
+fn index() -> &'static str {
+    "Hello, RA-GAS GmbH!"
+}
+
 fn main() {
-    println!("Hello, RUST world!");
+    rocket::ignite().mount("/", routes![index]).launch();
 }
